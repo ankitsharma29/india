@@ -8,27 +8,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Chhattisgarh</title>
-    <style>
-        
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .d-flex {
-            display: flex;
-        }
-        @media (max-width:768px){
-            .Scroll{
-                overflow:scroll;
-                height:600px;
-                width:300px;
-            }
-        }
-    </style>
+    <script src="../../js/ios-orientationchange-fix.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container my-4 Scroll">
+    <div class="container my-4">
         <h3 class="text-center">Chhattisgarh</h3>
         <img src="./images/Chhattisgarh.jpg" class="mx-auto d-flex" alt="Chhattisgarh" usemap="#Chhattisgarh">
         <map name="Chhattisgarh" id="Chhattisgarh">
@@ -50,5 +34,17 @@
             <area shape="poly" coords="159,659,155,656,151,652,155,646,151,642,151,632,150,625,153,623,139,623,142,618,132,625,129,621,134,614,129,606,124,596,119,587,114,582,104,578,101,582,93,583,87,580,88,574,82,566,89,561,91,551,82,544,88,534,93,523,99,517,101,508,108,504,114,506,121,507,126,508,122,516,134,509,134,501,138,499,146,502,150,498,158,500,161,508,169,506,180,506,189,513,196,516,201,525,204,532,202,538,206,547,206,552,214,554,224,555,228,559,241,559,250,560,246,567,241,572,247,577,237,582,231,589,226,596,223,602,210,602,203,607,201,614,200,627,196,631,199,635,196,640,195,648,191,651,187,655,177,656,168,653,165,657" title="Dantewada" href="#Dantewada" alt="Dantewada" />
           </map>
     </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script>
 </body>
 </html>

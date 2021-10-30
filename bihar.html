@@ -8,27 +8,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Bihar</title>
-    <style>
-        
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .d-flex {
-            display: flex;
-        }
-        @media (max-width:768px){
-            .Scroll{
-                overflow:scroll;
-                height:600px;
-                width:300px;
-            }
-        }
-    </style>
+    <script src="../../js/ios-orientationchange-fix.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container my-4 Scroll">
+    <div class="container my-4">
         <h3 class="text-center">Bihar</h3>
         <img src="./images/Bihar.jpg" class="mx-auto d-flex" alt="bihar" usemap="#bihar">
 
@@ -73,5 +57,16 @@
             <area shape="poly" coords="114,256,109,255,104,253,99,250,99,245,98,239,94,235,94,231,98,229,99,224,101,213,102,204,102,199,109,196,113,199,122,201,129,197,131,195,136,200,142,201,152,202,153,210,149,218,145,225,146,230,140,237,140,240,136,244,130,246,126,251,118,253" title="Bhojpur" href="#Bhojpur" alt="Bhojpur" />
           </map>
     </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jquery.rwdImageMaps.min.js"></script>
+    <script>
+    $(document).ready(function(e) {
+        $('img[usemap]').rwdImageMaps();
+        
+        $('area').on('click', function() {
+            alert($(this).attr('alt') + ' clicked');
+        });
+    });
+    </script>
 </body>
 </html>

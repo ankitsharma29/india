@@ -8,27 +8,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Gujarat</title>
-    <style>
-        
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .d-flex {
-            display: flex;
-        }
-        @media (max-width:768px){
-            .Scroll{
-                overflow:scroll;
-                height:600px;
-                width:300px;
-            }
-        }
-    </style>
+    <script src="../../js/ios-orientationchange-fix.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<div class="container my-4 scroll">
+<div class="container my-4">
     <h3 class="text-center">Gujarat</h3>
     <img src="./images/Gujarat.jpg"  class="mx-auto d-flex" alt="Gujarat State"  usemap="#Map" border="0" />
 <map name="Map" id="Map">
@@ -60,5 +44,17 @@
   <area shape="poly" coords="103,255,90,247,84,240,72,229,69,218,78,206,80,213,90,210,88,221,86,233,90,226,103,221,112,215,117,218,124,215,132,209,136,211,143,204,155,199,164,197,169,190,174,177,178,170,180,177,187,170,196,166,200,181,193,196,190,205,191,216,196,226,192,238,186,239,171,242,167,248,163,250,156,259,147,262,136,262,125,260,120,255,118,249,111,255" href="#Jamnagar"  title="Jamnagar" alt="Jamnagar" />
 </map>
 </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script>
 </body>
 </html>

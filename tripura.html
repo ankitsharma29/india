@@ -8,27 +8,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Tripura</title>
-    <style>
-        
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .d-flex {
-            display: flex;
-        }
-        @media (max-width:768px){
-            .Scroll{
-                overflow:scroll;
-                height:600px;
-                width:300px;
-            }
-        }
-    </style>
+    <script src="../../js/ios-orientationchange-fix.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container my-4 Scroll">
+    <div class="container my-4">
         <h3 class="text-center">Tripura</h3>
         <img src="./images/Tripura.jpg" class="mx-auto d-flex" alt="Tripura" usemap="#Tripura">
         <map name="Tripura" id="Tripura">
@@ -39,5 +23,17 @@
               </map>
           </map>
     </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script>
 </body>
 </html>

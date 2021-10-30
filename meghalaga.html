@@ -8,27 +8,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Meghalaga</title>
-    <style>
-        
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .d-flex {
-            display: flex;
-        }
-        @media (max-width:768px){
-            .Scroll{
-                overflow:scroll;
-                height:600px;
-                width:300px;
-            }
-        }
-    </style>
+    <script src="../../js/ios-orientationchange-fix.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container my-4 Scroll">
+    <div class="container my-4">
         <h3 class="text-center">Meghalaga</h3>
         <img src="./images/Meghalaya.jpg" class="mx-auto d-flex" alt="Meghalaga" usemap="#Meghalaga">
         <area shape="poly" coords="64,239,44,230,31,230,25,231,21,222,20,212,26,197,26,186,46,179,48,174,41,170,27,155,35,152,36,140,42,136,45,128,60,117,68,122,82,118,107,113,102,126,98,135,106,140,111,152,111,166,105,184,96,197,109,199,104,207,98,220,87,237,86,243" title="West-Garo-Hills" href="#West-Garo-Hills" alt="West Garo Hills" />
@@ -41,5 +25,17 @@
         <area shape="poly" coords="380,145,345,148,328,144,322,137,316,122,300,126,267,132,252,125,269,119,277,108,286,88,295,89,298,107,310,98,310,80,327,69,333,81,344,87,351,80,364,79,378,71,387,74,399,71,383,90,386,101,381,111,379,127" title="Ri Bhoi" href="#Ri-Bhoi" alt="Ri Bhoi" />
       </map>
     </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script>
 </body>
 </html>

@@ -8,27 +8,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>mizoram</title>
-    <style>
-        
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .d-flex {
-            display: flex;
-        }
-        @media (max-width:768px){
-            .Scroll{
-                overflow:scroll;
-                height:600px;
-                width:300px;
-            }
-        }
-    </style>
+    <script src="../../js/ios-orientationchange-fix.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container my-4 Scroll">
+    <div class="container my-4">
         <h3 class="text-center">Mizoram</h3>
         <img src="./images/Mizoram.jpg" class="mx-auto d-flex" alt="mizoram" usemap="#mizoram">
         <map name="mizoram" id="mizoram">
@@ -42,5 +26,17 @@
             <area shape="poly" coords="247,606,248,577,239,550,235,539,233,525,248,529,267,534,279,529,283,545,288,562,299,564,306,590,314,614,324,638,332,662,328,687,326,703,314,709,297,703,292,725,277,738,285,764,267,767,253,775,243,757,235,731,230,698,226,674,249,648,260,652,250,624" title="Saiha" href="#Saiha" alt="Saiha" />
           </map>
     </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.rwdImageMaps.min.js"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+	$('area').on('click', function() {
+		alert($(this).attr('alt') + ' clicked');
+	});
+});
+</script>
 </body>
 </html>

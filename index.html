@@ -16,24 +16,29 @@
             padding: 0;
             box-sizing: border-box;
         }
-        .d-flex {
-            display: flex;
-        }
+       
         @media (max-width:768px){
+            svg{
+                height:400px;
+                width:300px;
+            }
+        }
+        /* @media (max-width:768px){
             .Scroll{
                 overflow:scroll;
                 height:600px;
                 width:300px;
             }
-        }
+        } */
     </style>
 </head>
 <body>
 
-    <div class="container my-4 Scroll">
+    <div class="container my-4">
         <h3 class="text-center">India</h3>
         <!-- <?xml version="1.0"?> -->
-        <svg baseprofile="tiny" fill="#ececec" height="1136" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".1" version="1.2" viewbox="0 0 1000 1136" width="1000" xmlns="http://www.w3.org/2000/svg">
+        <div class="mx-auto text-center india">
+        <svg baseprofile="tiny" fill="#ececec" height="500" width="800" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width=".1" version="1.2" viewbox="0 0 1000 1136" xmlns="http://www.w3.org/2000/svg">
             <g id="combined">
 
                 <a xlink:href="#" xlink:Title="Andaman and Nicobar">
@@ -305,6 +310,7 @@
                 </circle>
                 </g>
         </svg>
-    </div>   
+    </div> 
+</div>  
 </body>
 </html>
